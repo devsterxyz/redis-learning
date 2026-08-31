@@ -1,7 +1,7 @@
 services:
   redis:
     image: redis:7-alpine
-    container_name: redis-learning
+    container_name: redis-learnin
     ports:
       - "6379:6379"
     command: ["redis-server", "--appendonly", "yes"]
@@ -10,11 +10,11 @@ services:
 
   mongo:
       image: mongo:7-jammy
-      container_name: chai-aur-mongo
+      container_name: chai-aur-mong
       ports:
         - "27017:27017"
       environment:
-        MONGO_INITDB_DATABASE: redis_learning
+        MONGO_INITDB_DATABASE: redis_learnin
       volumes:
         - mongo_data:/data/db
 
